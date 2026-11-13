@@ -244,6 +244,42 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
 }
 @media(prefers-reduced-motion:reduce){.reviews-track{scroll-behavior:auto}}
 
+
+/* Services navigation and horizontal service cards */
+.service-menu{top:100%;margin-top:.55rem}
+.nav-dropdown::after{content:"";position:absolute;top:100%;left:-1rem;right:-1rem;height:.7rem}
+.service-menu{z-index:80}
+.services{padding:clamp(3.5rem,7vw,6rem) 0;background:var(--panel);border-block:1px solid var(--line)}
+.services .wrap{display:block}
+.services-head{display:flex;align-items:end;justify-content:space-between;gap:1.5rem;margin-bottom:1.8rem}
+.services .intro{position:static;max-width:650px}
+.services .intro h2{margin:.4rem 0 .65rem}
+.services .intro p{color:var(--muted);max-width:56ch;margin:0}
+.services-controls{display:flex;gap:.6rem;flex-shrink:0}
+.services-controls button{width:44px;height:44px;border-radius:50%;border:1px solid #454545;background:#171717;color:#fff;font-size:1.3rem;cursor:pointer;transition:.2s}
+.services-controls button:hover{background:var(--red);border-color:var(--red)}
+.services-track{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth;padding:.2rem .1rem .75rem}
+.services-track::-webkit-scrollbar{display:none}
+.service-card{position:relative;isolation:isolate;overflow:hidden;display:flex;flex:0 0 calc((100% - 2rem)/3);min-height:280px;flex-direction:column;padding:1.4rem;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:linear-gradient(145deg,#242528 0%,#131416 75%);color:#fff;text-decoration:none;scroll-snap-align:start;transition:transform .22s,border-color .22s,background .22s}
+.service-card::before{content:"";position:absolute;z-index:-1;width:190px;height:190px;right:-65px;top:45px;border-radius:50%;background:radial-gradient(circle,rgba(225,6,0,.19),transparent 70%);transition:transform .3s}
+.service-card:hover{transform:translateY(-4px);border-color:rgba(225,6,0,.65);background:linear-gradient(145deg,#292a2d,#151517)}
+.service-card:hover::before{transform:scale(1.35)}
+.service-number{font-size:.7rem;font-weight:800;letter-spacing:.14em;color:#aaa}
+.service-icon{display:grid;place-items:center;width:48px;height:48px;margin:1.5rem 0 1rem;border-radius:10px;background:rgba(225,6,0,.13);border:1px solid rgba(225,6,0,.3);color:#ff5a52;font-size:1.7rem}
+.service-card h3{font-size:1.2rem;line-height:1.25;margin:0 0 .6rem}
+.service-card p{color:#b8b8bd;font-size:.92rem;line-height:1.55;margin:0 0 1.3rem}
+.service-more{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:.9rem;border-top:1px solid rgba(255,255,255,.1);font-size:.84rem;font-weight:700;color:#fff}
+.service-more b{color:#ff5a52;font-size:1.2rem}
+.services-progress{height:3px;margin-top:.8rem;background:#343434;border-radius:8px;overflow:hidden}
+.services-progress span{display:block;width:42.85%;height:100%;background:var(--red);transition:transform .2s}
+@media(max-width:760px){
+ .services-head{align-items:flex-start;flex-direction:column}
+ .services-controls{align-self:flex-end;margin-top:-.2rem}
+ .service-card{flex:0 0 min(82%,330px);min-height:265px}
+ .services-track{gap:.85rem}
+}
+@media(prefers-reduced-motion:reduce){.services-track{scroll-behavior:auto}.service-card{transition:none}}
+
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "AutomotiveBusiness", "name": "RS Sound", "slogan": "Our work is sound", "telephone": "+905332512245", "description": "Antalya Muratpaşa’da araç multimedya, ambiyans aydınlatma, yıldız tavan, ses sistemi, geri görüş kamerası, elektrikli bagaj, body kit, karbon kaplama ve G Class dönüşümü.", "address": {"@type": "PostalAddress", "streetAddress": "Torbalı Apartmanı, Yeşilova, Aspendos Blv. No:204 D:A", "addressLocality": "Muratpaşa", "addressRegion": "Antalya", "postalCode": "07200", "addressCountry": "TR"}, "sameAs": ["https://www.instagram.com/rs.sound7"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Araç hizmetleri", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Antalya multimedya ve teyp"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Antalya ambiyans aydınlatma"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Antalya yıldız tavan"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Antalya araç ses sistemi"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Antalya geri görüş kamerası montajı"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Antalya elektrikli bagaj"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "G Class dönüşümü"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Body kit ve karbon kaplama"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Araç takip cihazı"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Direksiyon değişimi"}}]}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Antalya’da multimedya ve teyp değişimi için ne yapmam gerekir?", "acceptedAnswer": {"@type": "Answer", "text": "Aracınızın marka, model ve yılını yazmanız yeterli. Uygun multimedya sistemini birlikte belirler, montaj için randevu veririz."}}, {"@type": "Question", "name": "Ambiyans aydınlatma ve yıldız tavan birlikte yapılabilir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Evet, iki uygulama birlikte planlanabilir. Renk ve uygulanacak bölgeleri aracınıza göre belirleriz."}}, {"@type": "Question", "name": "Elektrikli bagaj ücretleri ne kadar?", "acceptedAnswer": {"@type": "Answer", "text": "Ücret aracın marka ve modeline, kullanılan sisteme ve montaj kapsamına göre değişir. Aracınızın modelini yazın, size net bilgi verelim."}}, {"@type": "Question", "name": "Geri görüş kamerası için yeni multimedya şart mı?", "acceptedAnswer": {"@type": "Answer", "text": "Kameranın görüntüsü bir ekranda gösterilmelidir. Aracınızdaki ekranın uyumuna göre mevcut ekranı ya da yeni bir multimedya sistemini birlikte değerlendiririz."}}, {"@type": "Question", "name": "RS Sound Antalya’nın neresinde?", "acceptedAnswer": {"@type": "Answer", "text": "Atölyemiz Yeşilova mahallesinde, Aspendos Bulvarı No:204 D:A, Muratpaşa/Antalya adresindedir."}}]}]}</script>
 <link rel="canonical" href="https://rssoundantalya.com.tr/">
@@ -350,40 +386,27 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
 
   <section class="services" id="hizmetler">
     <div class="wrap">
-      <div class="intro">
-        <h2>Antalya’da yaptığımız araç işleri</h2>
-        <p>Hangi işi istediğinizi ve aracınızın modelini yazın, size dönelim.</p>
-      </div>
-      <div>
-        <div class="group">
-          <h3>Görüntü ve ses</h3>
-          <ul>
-            <li><b>Multimedya</b><span>Aracınıza uygun ekran ve sistem kurulumu.</span></li>
-            <li><b>Geri görüş kamerası</b><span>Park ederken net görüş için kamera montajı.</span></li>
-            <li><b>Ses sistemi</b><span>Hoparlör, tweeter, Burmester ve diğer ses sistemi kurulumları.</span></li>
-            <li><b>Hoparlör tamiri</b><span>Arızalı ya da bozulmuş hoparlörlerin onarımı.</span></li>
-          </ul>
+      <div class="services-head">
+        <div class="intro">
+          <span class="eyebrow">RS SOUND · ANTALYA</span>
+          <h2>Aracınıza özel çözümler</h2>
+          <p>İhtiyacınıza uygun hizmeti keşfedin. Detayları görmek ve aracınıza uygun uygulamayı incelemek için karta dokunun.</p>
         </div>
-        <div class="group">
-          <h3>İç mekân</h3>
-          <ul>
-            <li><b>Ambiyans aydınlatma</b><span>Kabin içi renkli aydınlatma.</span></li>
-            <li><b>Yıldız tavan</b><span>Tavanda yıldızlı gökyüzü görünümü.</span></li>
-            <li><b>Direksiyon değişimi</b><span>Yeni direksiyon takımı ve değişimi.</span></li>
-            <li><b>Start-Stop yeni nesil direksiyon</b><span>Start-Stop düğmeli yeni nesil direksiyon dönüşümü.</span></li>
-            <li><b>Elektrikli bagaj</b><span>Bagaj kapağını tek tuşla açıp kapatan sistem.</span></li>
-          </ul>
-        </div>
-        <div class="group">
-          <h3>Dış görünüm ve güvenlik</h3>
-          <ul>
-            <li><b>Body kit</b><span>Aracın dış tasarımını değiştiren kit montajı.</span></li>
-            <li><b>Karbon kaplama</b><span>Parçalarda karbon görünümlü kaplama.</span></li>
-            <li><b>Araç takip cihazı</b><span>Aracınızın konumunu izleyebileceğiniz cihaz montajı.</span></li>
-            <li><b>Proje araçlar</b><span>Size özel planlanan, birden fazla işi kapsayan araç projeleri.</span></li>
-          </ul>
+        <div class="services-controls" aria-label="Hizmetleri kaydır">
+          <button type="button" id="service-prev" aria-label="Önceki hizmetler">‹</button>
+          <button type="button" id="service-next" aria-label="Sonraki hizmetler">›</button>
         </div>
       </div>
+      <div class="services-track" id="services-track" tabindex="0" aria-label="RS Sound hizmetleri">
+        <a class="service-card" href="/oto-multimedya-antalya/"><span class="service-number">01 / MULTİMEDYA</span><span class="service-icon" aria-hidden="true">▣</span><h3>Oto Multimedya &amp; CarPlay</h3><p>Android ekran, navigasyon ve telefon bağlantısı çözümleri.</p><span class="service-more">Detayları incele <b>↗</b></span></a>
+        <a class="service-card" href="/arac-ici-ambiyans-aydinlatma-antalya/"><span class="service-number">02 / İÇ MEKÂN</span><span class="service-icon" aria-hidden="true">✧</span><h3>Ambiyans Aydınlatma</h3><p>Aracınızın kabinine özel renkler ve atmosfer.</p><span class="service-more">Detayları incele <b>↗</b></span></a>
+        <a class="service-card" href="/arac-ses-sistemi-antalya/"><span class="service-number">03 / SES</span><span class="service-icon" aria-hidden="true">♫</span><h3>Araç Ses Sistemleri</h3><p>Hoparlör, amfi ve araç içi ses sistemi uygulamaları.</p><span class="service-more">Detayları incele <b>↗</b></span></a>
+        <a class="service-card" href="/kamera-ve-park-sistemleri-antalya/"><span class="service-number">04 / GÜVENLİK</span><span class="service-icon" aria-hidden="true">◉</span><h3>Kamera &amp; Park Sistemleri</h3><p>Geri görüş kamerası ve park desteği çözümleri.</p><span class="service-more">Detayları incele <b>↗</b></span></a>
+        <a class="service-card" href="/elektrikli-bagaj-antalya/"><span class="service-number">05 / KONFOR</span><span class="service-icon" aria-hidden="true">⇧</span><h3>Elektrikli Bagaj</h3><p>Bagaj kapağını tek tuşla açıp kapatma kolaylığı.</p><span class="service-more">Detayları incele <b>↗</b></span></a>
+        <a class="service-card" href="/elektrikli-basamak-antalya/"><span class="service-number">06 / KONFOR</span><span class="service-icon" aria-hidden="true">↔</span><h3>Elektrikli Yan Basamak</h3><p>Araca biniş ve inişi kolaylaştıran otomatik basamak.</p><span class="service-more">Detayları incele <b>↗</b></span></a>
+        <a class="service-card" href="/vip-arac-donusumu-antalya/"><span class="service-number">07 / ÖZEL PROJE</span><span class="service-icon" aria-hidden="true">◇</span><h3>VIP Araç Dönüşümü</h3><p>Aracınızın iç ve dış tasarımına özel dokunuşlar.</p><span class="service-more">Detayları incele <b>↗</b></span></a>
+      </div>
+      <div class="services-progress" aria-hidden="true"><span id="services-progress-bar"></span></div>
     </div>
   </section>
 
@@ -617,6 +640,27 @@ ids.forEach(function(id){var sec=document.getElementById(id);if(sec)io.observe(s
   track.addEventListener('scroll', update, {passive:true});
   window.addEventListener('resize', update);
   update();
+})();
+</script>
+
+
+<script>
+(() => {
+ const track=document.getElementById('services-track');
+ if(!track)return;
+ const cards=[...track.querySelectorAll('.service-card')];
+ const bar=document.getElementById('services-progress-bar');
+ const step=()=>cards[0].getBoundingClientRect().width+parseFloat(getComputedStyle(track).gap||16);
+ document.getElementById('service-prev')?.addEventListener('click',()=>track.scrollBy({left:-step()*3,behavior:'smooth'}));
+ document.getElementById('service-next')?.addEventListener('click',()=>track.scrollBy({left:step()*3,behavior:'smooth'}));
+ const update=()=>{
+  if(!bar)return;
+  const max=Math.max(1,track.scrollWidth-track.clientWidth);
+  bar.style.transform='translateX('+(track.scrollLeft/max*133.33)+'%)';
+ };
+ track.addEventListener('scroll',update,{passive:true});
+ window.addEventListener('resize',update);
+ update();
 })();
 </script>
 
