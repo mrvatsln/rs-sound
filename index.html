@@ -214,6 +214,34 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
 .reel-link img{display:block;width:100%;aspect-ratio:9/16;object-fit:cover}
 .reel-play{position:absolute;left:0;right:0;bottom:0;padding:.85rem .5rem;text-align:center;font-size:.85rem;font-weight:700;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.85))}
 .reel-link:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+/* Customer feedback cards */
+.reviews{padding:clamp(3.5rem,7vw,6rem) 0;background:linear-gradient(180deg,#111 0%,#090909 100%);border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07)}
+.reviews-head{display:flex;align-items:end;justify-content:space-between;gap:1.5rem;margin-bottom:1.8rem}
+.reviews-head .lead2{max-width:620px;margin:.65rem 0 0}
+.reviews-controls{display:flex;gap:.6rem;flex-shrink:0}
+.reviews-controls button{width:44px;height:44px;border-radius:50%;border:1px solid #454545;background:#171717;color:#fff;font-size:1.25rem;cursor:pointer;transition:.2s}
+.reviews-controls button:hover{background:var(--red);border-color:var(--red)}
+.reviews-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.review-card{min-width:0;padding:1.45rem;border:1px solid rgba(255,255,255,.1);border-radius:12px;background:linear-gradient(145deg,#1b1b1b,#111);display:flex;flex-direction:column;min-height:225px}
+.review-stars{color:#f4bd4f;letter-spacing:.14em;font-size:.95rem;margin-bottom:1rem}
+.review-card blockquote{margin:0;color:#eee;font-size:1rem;line-height:1.7;flex:1}
+.review-meta{display:flex;align-items:center;justify-content:space-between;gap:.8rem;margin-top:1.3rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.1)}
+.review-name{font-weight:750;color:#fff}
+.review-service{font-size:.78rem;color:#aaa;text-align:right}
+.review-note{margin:1rem 0 0;color:#999;font-size:.78rem;line-height:1.55}
+.review-progress{display:none}
+@media(max-width:760px){
+ .reviews-head{align-items:flex-start;flex-direction:column}
+ .reviews-controls{align-self:flex-end;margin-top:-.2rem}
+ .reviews-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;gap:.85rem;padding-bottom:.5rem}
+ .reviews-track::-webkit-scrollbar{display:none}
+ .review-card{flex:0 0 min(86%,360px);scroll-snap-align:start;min-height:240px}
+ .review-progress{display:block;height:3px;background:#333;border-radius:9px;margin-top:.9rem;overflow:hidden}
+ .review-progress span{display:block;width:33.333%;height:100%;background:var(--red);transition:transform .2s}
+}
+@media(prefers-reduced-motion:reduce){.reviews-track{scroll-behavior:auto}}
+
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "AutomotiveBusiness", "name": "RS Sound", "slogan": "Our work is sound", "telephone": "+905332512245", "description": "Antalya Muratpaşa’da araç multimedya, ambiyans aydınlatma, yıldız tavan, ses sistemi, geri görüş kamerası, elektrikli bagaj, body kit, karbon kaplama ve G Class dönüşümü.", "address": {"@type": "PostalAddress", "streetAddress": "Torbalı Apartmanı, Yeşilova, Aspendos Blv. No:204 D:A", "addressLocality": "Muratpaşa", "addressRegion": "Antalya", "postalCode": "07200", "addressCountry": "TR"}, "sameAs": ["https://www.instagram.com/rs.sound7"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Araç hizmetleri", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Antalya multimedya ve teyp"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Antalya ambiyans aydınlatma"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Antalya yıldız tavan"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Antalya araç ses sistemi"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Antalya geri görüş kamerası montajı"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Antalya elektrikli bagaj"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "G Class dönüşümü"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Body kit ve karbon kaplama"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Araç takip cihazı"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Direksiyon değişimi"}}]}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Antalya’da multimedya ve teyp değişimi için ne yapmam gerekir?", "acceptedAnswer": {"@type": "Answer", "text": "Aracınızın marka, model ve yılını yazmanız yeterli. Uygun multimedya sistemini birlikte belirler, montaj için randevu veririz."}}, {"@type": "Question", "name": "Ambiyans aydınlatma ve yıldız tavan birlikte yapılabilir mi?", "acceptedAnswer": {"@type": "Answer", "text": "Evet, iki uygulama birlikte planlanabilir. Renk ve uygulanacak bölgeleri aracınıza göre belirleriz."}}, {"@type": "Question", "name": "Elektrikli bagaj ücretleri ne kadar?", "acceptedAnswer": {"@type": "Answer", "text": "Ücret aracın marka ve modeline, kullanılan sisteme ve montaj kapsamına göre değişir. Aracınızın modelini yazın, size net bilgi verelim."}}, {"@type": "Question", "name": "Geri görüş kamerası için yeni multimedya şart mı?", "acceptedAnswer": {"@type": "Answer", "text": "Kameranın görüntüsü bir ekranda gösterilmelidir. Aracınızdaki ekranın uyumuna göre mevcut ekranı ya da yeni bir multimedya sistemini birlikte değerlendiririz."}}, {"@type": "Question", "name": "RS Sound Antalya’nın neresinde?", "acceptedAnswer": {"@type": "Answer", "text": "Atölyemiz Yeşilova mahallesinde, Aspendos Bulvarı No:204 D:A, Muratpaşa/Antalya adresindedir."}}]}]}</script>
 <link rel="canonical" href="https://rssoundantalya.com.tr/">
@@ -251,6 +279,7 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
         </div>
       </div>
       <a href="#calismalar">Uygulamalar</a>
+      <a href="#yorumlar">Yorumlar</a>
       <a href="#rehber">Blog</a>
       <a href="#iletisim">İletişim</a>
       <button type="button" class="srch" id="sbtn" aria-label="Sitede ara" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
@@ -371,6 +400,57 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
         </div>
       </div>
       <a class="btn main" href="https://wa.me/905332512245" target="_blank" rel="noopener">G Class’ınız için yazın</a>
+    </div>
+  </section>
+
+
+  <section class="reviews" id="yorumlar" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="reviews-head">
+        <div>
+          <span class="eyebrow">RS SOUND DENEYİMİ</span>
+          <h2 id="reviews-title">Müşterilerimiz ne diyor?</h2>
+          <p class="lead2">İşçilikten montaj sürecine, aracınıza gösterdiğimiz özenin her aşaması önemli.</p>
+        </div>
+        <div class="reviews-controls" aria-label="Yorumları kaydır">
+          <button type="button" id="review-prev" aria-label="Önceki yorumlar">‹</button>
+          <button type="button" id="review-next" aria-label="Sonraki yorumlar">›</button>
+        </div>
+      </div>
+      <div class="reviews-track" id="reviews-track" tabindex="0" aria-label="Örnek müşteri yorumları">
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+          <blockquote>“Ersin Bey ile iletişime geçtim, baştan sona çok ilgiliydi. Yapılacak işlemi detaylı anlattılar, aracımı da söyledikleri zamanda teslim aldım.”</blockquote>
+          <div class="review-meta"><span class="review-name">Ahmet B.</span><span class="review-service">Genel hizmet deneyimi</span></div>
+        </article>
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+          <blockquote>“Geri görüş kamerası montajı için geldim. Aynı gün içinde montajı tamamladılar, görüntü gayet net. Garanti konusunu da teslimde anlattılar.”</blockquote>
+          <div class="review-meta"><span class="review-name">Murat K.</span><span class="review-service">Geri görüş kamerası</span></div>
+        </article>
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+          <blockquote>“Ambiyans aydınlatma tam istediğim gibi oldu. Montaj sonrası her şeyi kontrol ettiler, aracımı aynı gün teslim aldım. İşçilikten memnun kaldım.”</blockquote>
+          <div class="review-meta"><span class="review-name">Emre T.</span><span class="review-service">Ambiyans aydınlatma</span></div>
+        </article>
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+          <blockquote>“Elektrikli basamak araca çok yakıştı, açılıp kapanması sorunsuz. Montaj ve bilgilendirme süreci gayet düzenliydi.”</blockquote>
+          <div class="review-meta"><span class="review-name">Serkan D.</span><span class="review-service">Elektrikli yan basamak</span></div>
+        </article>
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+          <blockquote>“Dükkan temiz ve düzenliydi, ekip güler yüzlüydü. Aracı teslim etmeden önce yapılan işlemleri tek tek gösterdiler, içim rahat etti.”</blockquote>
+          <div class="review-meta"><span class="review-name">Burak Y.</span><span class="review-service">Servis deneyimi</span></div>
+        </article>
+        <article class="review-card">
+          <div class="review-stars" aria-label="5 yıldız">★★★★★</div>
+          <blockquote>“Araç ses sistemi için geldim. İhtiyacıma göre seçenek sundular, gereksiz masraf çıkarmadan temiz bir montaj yaptılar.”</blockquote>
+          <div class="review-meta"><span class="review-name">Caner A.</span><span class="review-service">Araç ses sistemi</span></div>
+        </article>
+      </div>
+      <div class="review-progress" aria-hidden="true"><span id="review-progress-bar"></span></div>
+      <p class="review-note">Not: Bu alandaki metinler tasarım ve yerleşim amacıyla hazırlanmış örnek yorum taslaklarıdır; doğrulanmış müşteri değerlendirmesi değildir. Yayına alınmadan önce gerçek müşteri geri bildirimleriyle değiştirilmelidir.</p>
     </div>
   </section>
 
@@ -515,5 +595,28 @@ ids.forEach(function(id){var sec=document.getElementById(id);if(sec)io.observe(s
 <a href="/vip-arac-donusumu-antalya/">VIP Araç Dönüşümü</a></nav>
 <p style="margin-top:24px"><a href="tel:+905332512245">0533 251 22 45</a> · <a href="https://wa.me/905332512245">WhatsApp'tan bilgi alın</a></p>
 </section>
+
+<script>
+(() => {
+  const track = document.getElementById('reviews-track');
+  if (!track) return;
+  const cards = [...track.querySelectorAll('.review-card')];
+  const bar = document.getElementById('review-progress-bar');
+  const step = () => cards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 16);
+  document.getElementById('review-prev')?.addEventListener('click', () => track.scrollBy({left:-step()*3,behavior:'smooth'}));
+  document.getElementById('review-next')?.addEventListener('click', () => track.scrollBy({left:step()*3,behavior:'smooth'}));
+  const update = () => {
+    if (!bar) return;
+    const max = Math.max(1, track.scrollWidth-track.clientWidth);
+    const ratio = track.scrollLeft/max;
+    bar.style.width = '33.333%';
+    bar.style.transform = 'translateX(' + (ratio*200) + '%)';
+  };
+  track.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update);
+  update();
+})();
+</script>
+
 </body>
 </html>
