@@ -172,7 +172,7 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
 
 .show{position:relative;overflow:hidden;background:#0a0a0b;isolation:isolate;--fh:min(calc(100svh - 4.5rem),800px)}
 .show::before{content:"";position:absolute;inset:-30px;background:var(--hero) center/cover;filter:blur(30px) brightness(.26) saturate(.8);z-index:-1}
-.frame{position:relative;margin:0 auto;aspect-ratio:1170/1062;width:100%;background:var(--hero) center/cover no-repeat}
+.frame{position:relative;margin:0 auto;aspect-ratio:1170/1062;width:100%;overflow:hidden}.frame>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
 .copy{text-align:center;padding:1.5rem 1.25rem 2.5rem}
 .show h1{font-size:clamp(1.4rem,5.5vw,2.1rem);line-height:1.2;max-width:22ch;margin:0 auto .9rem}
 .show .lead{font-size:1rem;max-width:44ch;margin:0 auto 1.25rem;color:#e2e1e4}
@@ -357,7 +357,7 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
   </div></div>
 </div>
 <header class="show" id="top">
-  <div class="frame" role="img" aria-label="RS Sound tabelası önünde dönüşümü yapılmış siyah Mercedes G Class"></div>
+  <div class="frame"><img src="/slider1.png" alt="RS Sound Antalya atölyesinde dönüşümü yapılmış siyah Mercedes G Class" fetchpriority="high" decoding="async"></div>
   <div class="copy">
     <h1>Aracınızın sesini, ışığını ve çizgisini değiştiriyoruz.</h1>
     <p class="lead">Antalya multimedya, ambiyans aydınlatma, araç ses sistemi, yıldız tavan ve G Class dönüşümü işleri Muratpaşa’daki atölyemizde.</p>
