@@ -180,7 +180,8 @@ body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area
 .about{padding:3.5rem 0 0}
 .about p{max-width:70ch;color:var(--muted);margin:0}
 @media (min-width:761px){
-  .frame{aspect-ratio:1170/900;width:min(100%,calc(var(--fh)*1.3));background-position:center 37%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 15%,#000 85%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 15%,#000 85%,transparent 100%)}
+  .frame{aspect-ratio:1170/900;width:min(100%,calc(var(--fh)*1.3));-webkit-mask-image:
+  .frame>img{object-position:center 37%}linear-gradient(90deg,transparent 0,#000 15%,#000 85%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 15%,#000 85%,transparent 100%)}
   .copy{position:absolute;left:0;right:0;bottom:0;padding:5.5rem 2rem 2.25rem;background:linear-gradient(0deg,rgba(10,10,11,.97) 0%,rgba(10,10,11,.86) 58%,transparent 100%)}
   .show h1{font-size:clamp(1.5rem,2.8vw,2.3rem)}
 }
